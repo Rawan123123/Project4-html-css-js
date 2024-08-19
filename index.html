@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+
+    <div class="crud">
+        <div class="head">
+            <h2>cruds</h2>
+            <p>hello in my own website</p>
+        </div>
+        <div class="inputs">
+            <input id="title" placeholder="title" type="text">
+            <div class="prices">
+                <input onkeyup="getTotal()" id="price" placeholder="price" type="number">
+                <input onkeyup="getTotal()" id="taxes" placeholder="taxes" type="number">
+                <input onkeyup="getTotal()" id="ads" placeholder="ads" type="number">
+                <input onkeyup="getTotal()" id="discount" placeholder="discount" type="number">
+                <small id="total"></small>
+            </div>
+            <input id="count" placeholder="count" type="number">
+            <input id="category" placeholder="category" type="text">
+            <button id="submit">create</button>
+            <div class="searchBox">
+                
+                <input id="search" onkeyup="searchfun(this.value)" placeholder="search">
+                <div class="btnsearch">
+                    <button id="searchTitle" onclick="getmood(this.id)">search by title</button>
+                    <button id="searchCategory" onclick="getmood(this.id)">search by category</button>
+                </div>
+            </div>
+            <div id="deletAll" onclick="deleteAll()">Delete All</div>
+        </div>
+
+        <div class="outputs">
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>updates</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="mian.js"></script>
+</body>
+
+</html>
